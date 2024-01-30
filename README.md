@@ -13,14 +13,15 @@
 - Economies frequently experience large downturn beyond the scope of a 'normal' downturn.
 - This project considers that the average size of a downturn can vary over time. 
 - I estimate this using the model
-$$
+
+```math
 \begin{align}
 \underbrace{\log y_t}_{\text{Observed}} &= \rho_y \log y_{t-1} + \exp(\sigma_{t-1}) \epsilon_t \\
 \underbrace{\sigma_t}_{\text{Unobserved}} &= (1-\rho_\sigma) \overline{\sigma} + \rho_{\sigma} \sigma_{t-1} + \sigma_\nu \nu_t \\
 \epsilon_t &\sim \mathcal{N}(0, 1) \\
 \nu_t &\sim \mathcal{N}(0, 1).
 \end{align}
-$$
+```
 - $y_t$ is the (observed) gdp component
 - $\sigma_t$ is unobserved and determines the standard deviation of output innovations. As $\sigma_t$ increases, the standard deviation of $y_t$ increases.
 
