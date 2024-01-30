@@ -1,13 +1,5 @@
 # Stochastic Volatility
 
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']]
-    }
-  };
-</script>
-
 
 ### Task
 - Economies frequently experience large downturn beyond the scope of a 'normal' downturn.
