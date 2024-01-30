@@ -13,8 +13,8 @@ parameters {
   real sigma[N];
 }
 model {
-  rho_y ~ beta(7.2, .8);
-  rho_sigma ~ beta(7.2, .8);
+  rho_y ~ beta(7.2, 0.80);
+  rho_sigma ~ beta(7.2, 0.80);
   sigma_bar ~ normal(-4, 1);
   sigma_nu ~ gamma(1, 2);
   sigma[1] ~ normal( sigma_bar, sigma_nu / sqrt( 1 - (rho_sigma * rho_sigma)));
@@ -23,11 +23,4 @@ model {
   for (t in 2:N) 
     sigma[t] ~ normal((1 - rho_sigma) * sigma_bar + rho_sigma * sigma[t-1] , sigma_nu);
 }
-"""
-
-"""old beta distribution
-  rho_y ~ beta(.5, .2);
-  rho_sigma ~ beta(.5, .2);
-  rho_y ~ beta(.125, .125);
-  rho_sigma ~ beta(.125, .125);
 """
