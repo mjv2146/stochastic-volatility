@@ -20,17 +20,18 @@
 ### Data
 Argentina Industrial Production - [Global Economic Monitor](https://databank.worldbank.org/source/global-economic-monitor-(gem))
 
+### Notebooks
+| Notebook | Description |
+| --- | --- | 
+|[Clean Data](./notebooks/01_clean_data.ipynb) | Clean raw industrial production series to separate cycle and trend components. | 
+|[Main](./notebooks/02_main.ipynb) | Estimate stochastic volatility process. | 
+
+![blah](./fig/argentina_stochastic_volatility.png)
 
 ### Findings
 - Argentina features stochastic volatility - the standard deviation of GDP fluctuations changes over time. 
 - The volatility of GDP increased during recessions such as the Global Financial Crisis.
 - The volatility of GDP in Argentina decreased over time, starting in the 2000s.
-
-![blah](./fig/argentina_stochastic_volatility.png)
-
-### Notebooks
-- 01_clean_data: clean raw industrial production series to separate cycle and trend
-- 02_main: estimate stochastic volatility process
 
 ### Tools
 - pandas - data wrangling
